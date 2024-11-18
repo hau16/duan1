@@ -38,12 +38,12 @@
     <section class="featured-products">
         <h2>Sản phẩm nổi bật</h2>
         <div class="product-list">
-            <?php if ($result->num_rows > 0): ?>
-                <?php while ($row = $result->fetch_assoc()): ?>
+            <?php if ($result->num_rs > 0): ?>
+                <?php while ($rs = $result->fetch_assoc()): ?>
                     <div class="product-item">
-                        <img src="images/<?php echo $rs['image']; ?>" alt="<?php echo $row['name']; ?>">
-                        <h3><?php echo $row['name']; ?></h3>
-                        <p>Giá: <?php echo number_format($row['price'], 0, ',', '.'); ?> đ</p>
+                        <img src="images/<?php echo $rs['image']; ?>" alt="<?php echo $rs['name']; ?>">
+                        <h3><?php echo $rs['name']; ?></h3>
+                        <p>Giá: <?php echo number_format($rs['price'], 0, ',', '.'); ?> đ</p>
                         <button>Thêm vào giỏ</button>
                     </div>
                 <?php endwhile; ?>
